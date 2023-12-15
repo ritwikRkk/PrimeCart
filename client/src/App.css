@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    /* overflow-x: hidden; */
+}
+body{
+    /* position: relative; */
+    width: 100vw;
+    overflow-x: hidden;
+    /* padding-top: 80px; */
+    
+}
+.app{
+    position: relative;
+    /* overflow-x: hidden; */
+}
+
+/* @media screen and (max-width: 600px) {
+    .app{
+        overflow-x: hidden;
+    }
+} */
+
+::-webkit-scrollbar{
+    width: 0.5rem;
+    display: none;
+}
+::-webkit-scrollbar-track{
+    /* background-color: var(--text-color); */
+}
+::-webkit-scrollbar-thumb{
+    background-color: lightslategray;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: grey;
+}

@@ -1,0 +1,106 @@
+.slider {
+    width: 100%;
+    /* height: calc(100vh - 80px); */
+    /* height: calc(100vh - 80px); */
+    height: calc(100vh);
+    position: relative;
+    padding-top: 80px;
+}
+
+.slider_wrapper {
+    /* width: 100%; */
+    height: 100%;
+    /* height: 100%; */
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    /* position: absolute; */
+}
+
+.slides {
+    height: 100%;
+    background: rgb(246, 230, 217);
+    /* background: linear-gradient(90deg, rgba(246, 230, 217, 1) 0%, rgba(228, 146, 80, 1) 41%, rgba(226, 165, 115, 1) 77%); */
+    width: 100vw;
+    position: relative;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(90deg, rgba(247, 93, 139, 1), rgba(254, 220, 64, 1));
+
+}
+.slide-2{
+    background: #c8a94c;
+}
+.slide-3{
+    background: #ffd16c;
+    background: repeating-radial-gradient( ellipse farthest-corner at top left, #dd6a20 0%, #ffea50 28%, #e79237 52% ), repeating-radial-gradient( circle farthest-corner at top right, #dd6a20 0%, #ffea50 28%, #e79237 52% );
+}
+
+.slides::before {
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    content: "";
+    /* height: 200px; */
+    width: 200px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.8;
+}
+
+.slides img {
+    /* height: calc(100vh - 80px); */
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.slide_buttons {
+    width: 100%;
+    position: absolute;
+    bottom: 5px;
+    /* left: 50%;
+    right: 50%; */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 2;
+}
+
+.slide_buttons button {
+    background-color: transparent;
+    border: none;
+}
+
+.slide_buttons button[disabled] {
+    pointer-events: none;
+}
+
+.slide_buttons svg {
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ffffff98;
+}
+
+.slide_buttons svg:hover {
+    background-color: #fff;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .slide_buttons {
+        bottom: -5px;
+    }
+
+    .slide_buttons svg {
+        transform: scale(0.8);
+    }
+
+    br {
+        display: none;
+    }
+}

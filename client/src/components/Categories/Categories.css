@@ -1,0 +1,121 @@
+.categories_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.categories_header {
+    font-size: 2rem;
+    font-weight: 900;
+    padding-bottom: 10px;
+    color: slategray;
+    height: 45px;
+}
+
+.categories {
+    width: 100%;
+    max-width: 1500px;
+    height: 80vh;
+    height: calc(100vh - 140px);
+    display: flex;
+    gap: 10px;
+    /* padding: 10px; */
+}
+
+.categories_wrapper {
+    flex: 1 1;
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.categories_wrapper.wrapp-1 .items:nth-child(2) {
+    grid-row: 1/-1;
+    grid-column: 2/3;
+}
+
+.categories_wrapper.wrapp-2 .items:nth-child(3) {
+    grid-column: 1/-1;
+}
+
+.categories_wrapper.wrapp-1 .items:nth-child(1) img {
+    object-position: center;
+}
+
+.items {
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.items img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.categories_links {
+    z-index: 1;
+    text-decoration: none;
+}
+
+.categories_links button {
+    background-color: white;
+    border: none;
+    padding: 8px 18px;
+    cursor: pointer;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.categories_links button span {
+    position: relative;
+    z-index: 1;
+}
+
+
+.categories_links button::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    z-index: 1;
+    height: 100%;
+    background: #1877f2;
+    transition: all 0.35s;
+}
+
+.categories_links button:hover::before {
+    /* background-color: #1877f2;  */
+    /* color: white; */
+    width: 100%;
+}
+
+.categories_links button:hover .link_txt {
+    color: white;
+}
+
+@media screen and (max-width:768px) {
+    .categories {
+        flex-direction: column;
+        height: 130vh;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .categories_links button {
+        padding: 4px 8px;
+        font-size: 0.75rem;
+    }
+}

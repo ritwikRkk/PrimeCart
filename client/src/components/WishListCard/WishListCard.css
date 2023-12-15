@@ -1,0 +1,58 @@
+.wishlist_item {
+    display: flex;
+    gap: 10px;
+    position: relative;
+    box-shadow: 1px 1px 1px 1px #888888;
+}
+.wishlist_item .product_link{
+    text-decoration: none;
+}
+
+.wishlist_item .item_img {
+    display: block;
+    width: 40px;
+}
+
+.item_info {
+    display: flex;
+    flex-direction: column;
+    /* gap: 3px; */
+    justify-content: space-between;
+}
+
+.item_info h3.item_title {
+    font-size: 1rem;
+    overflow: hidden;
+    /* text-overflow: ellipsis; */
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+    /* padding-right: 15px; */
+    margin-right: 25px;
+}
+
+.item_info p.item_cost {
+    font-size: 1rem;
+    font-weight: bold;
+    color: red;
+}
+
+.item_info .utils_info {
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 15px;
+    font-size: 0.9rem;
+}
+.item_info .utils_info > p > span:nth-child(1) {
+    font-weight: bold;
+}
+
+.wishlist_item .delete_btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: darkred;
+    font-size: 1.1rem;
+    cursor: pointer;
+}

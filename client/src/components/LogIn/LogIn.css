@@ -1,0 +1,47 @@
+
+.login_wrapper{
+    min-width: 300px;
+}
+.login_wrapper form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.login_wrapper p {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+.login_wrapper p label{
+    /* color: grey; */
+}
+.login_wrapper p input{
+    outline: none;
+    border: 1px solid grey;
+    border-radius: 5px;
+    height: 25px;
+    padding: 2px 5px;
+    font-size: 1rem;
+}
+
+.login_btn{
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: #0066b8;
+    color: white;
+    width: 50%;
+    cursor: pointer;
+}
+.login_btn:hover{
+    transform: scale(0.95);
+    opacity: 0.8;
+}
+
+button[disabled]{
+    opacity: 0.5;
+}

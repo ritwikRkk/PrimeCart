@@ -1,0 +1,98 @@
+.cart_page_container {
+    width: 100%;
+    min-height: calc(100vh);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 80px 20px 20px;
+}
+
+.cart_page_wrapper {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100%;
+    max-width: 1300px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.cart_page_container .cart_subtotal {
+    position: sticky;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.cart_page_container .cart_subtotal p{
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    /* gap: 20px; */
+    font-size: 1.2rem;
+}
+.cart_page_container .cart_subtotal p:nth-child(1){
+    color: grey;
+}
+.cart_page_container .cart_subtotal p:nth-child(2) span:nth-child(2){
+    color: darkred;
+    font-weight: bold;
+}
+
+.cart_subtotal .checkout{
+    text-decoration: none;
+    cursor: pointer;
+}
+.cart_subtotal .checkout button{
+    outline: none;
+    border: none;
+    padding: 5px 10px;
+    background-color: #0066b8;
+    box-shadow: 2px 2px 3px 1px #888888;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.05rem;
+    transition: 0.3s;
+}
+.cart_subtotal .checkout button:hover {
+    cursor: pointer;
+    transform: scale(0.95);
+    opacity: 0.9;
+}
+
+.cart_page_container .empty_cart{
+    font-size: 1.2rem;
+    color: grey;
+    position: relative;
+    top: 80px;
+}
+
+@media screen and (max-width:950px){
+    .cart_page_wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width:650px){
+    .cart_page_container {
+        padding: 80px 10px 10px;
+    }
+    .cart_page_wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .cart_page_container .cart_subtotal p{
+        width: 200px;
+        font-size: 1rem;
+    }
+    .cart_subtotal .checkout button{
+        font-size: 0.8rem;
+    }
+}

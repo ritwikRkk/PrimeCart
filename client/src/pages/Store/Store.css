@@ -1,0 +1,159 @@
+.products_container {
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    padding-top: 80px;
+    min-height: 100vh;
+}
+
+.filter_opener {
+    display: none;
+}
+
+.left_container {
+    flex: 1;
+    position: sticky;
+    top: 50px;
+    top: 80px;
+    height: 100%;
+}
+
+.filter_closer {
+    position: absolute;
+    right: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+.filter_closer .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: white;
+}
+
+.filter_closer span {
+    font-size: 1.2rem;
+    /* color: lightskyblue; */
+    color: orangered;
+    font-weight: 600;
+}
+
+
+.filterItems {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.filterItems> div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+.filterItems div > h2 {
+    font-weight: 600;
+}
+.filterItems div > span {
+    cursor: pointer;
+    color: grey;
+}
+
+.inputItem input {
+    cursor: pointer;
+}
+
+.inputItem label {
+    margin-left: 10px;
+}
+
+.right_container {
+    flex: 4;
+}
+
+.catImg {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    /* object-position: bottom; */
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .filterItems h2 {
+        font-size: 1rem;
+    }
+
+    .catImg {
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .products_container {
+        flex-direction: column;
+        padding: 10px;
+        position: relative;
+        overflow: hidden;
+        padding-top: 110px;
+    }
+
+    .filter_opener {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* gap: 5px; */
+
+        position: fixed;
+        top: 80px;
+        width: 97%;
+        height: 30px;
+        z-index: 4;
+        background-color: white;
+    }
+    .filter_opener .filter_btn > *{
+        cursor: pointer;
+    }
+
+    .filter_closer {
+        display: block;
+    }
+
+    .left_container {
+        /* display: none; */
+        width: 100%;
+        background-color: #cccccce3;
+        background-color: rgb(0, 0, 0, 0.7);
+        /* padding: 20px; */
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 5;
+        transition: 0.3s;
+        color: white;
+        padding: 80px 10px 10px;
+    }
+
+    .left_container.active {
+        right: 0;
+    }
+
+    .right_container{
+        /* padding-top: 25px; */
+    }
+
+    body.overflow {
+        overflow-y: hidden;
+    }
+
+    .filterItems h2 {
+        font-size: 1.2rem;
+    }
+
+    .catImg {
+        display: none;
+    }
+}
